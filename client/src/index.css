@@ -1,21 +1,27 @@
+#root {
+    --_spacer: 2rem;
+}
+
 * {
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
     background-color: #FFF7ED;
     font-family: "Inter", sans-serif;
 }
 
+
 body::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
 
 body {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 header {
@@ -62,9 +68,9 @@ header a:hover {
 }
 
 #root {
-  display: flex;
-  height: 100vh;
-  flex-direction: column;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
 }
 
 /*** HOME PAGE ***/
@@ -90,9 +96,9 @@ header a:hover {
 }
 
 .home-container p {
-  text-align: center;
-  font-size: 2rem;
-  font-weight: 100;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 100;
 
 }
 
@@ -119,9 +125,9 @@ header a:hover {
 /*** ABOUT PAGE ***/
 
 .about-page-container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 1rem;
+    max-width: 1200px;
+    margin: auto;
+    padding: 1rem;
 }
 
 .about-hero-image {
@@ -160,52 +166,225 @@ header a:hover {
     border-radius: 10px;
 }
 
+/*** VAN PAGES ***/
+.van-list-container {
+    padding-inline: var(--_spacer);
+}
+
+.van-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    gap: var(--_spacer);
+    margin-top: 4rem;
+}
+
+.van-list a {
+    text-decoration: none;
+    color: #161616;
+}
+
+.van-tile img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.van-list-container button {
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.van-type {
+    padding: 6px var(--_spacer);
+    font-style: normal;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    background-color: #FFEAD0;
+    color: #4D4D4D;
+    transition: 200ms all cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.van-type:hover {
+    color: #FFEAD0;
+}
+
+.van-type:focus {
+    outline: none;
+}
+
+.van-type.selected {
+    color: #FFEAD0;
+}
+
+.van-type.simple:hover,
+.van-type.simple.selected {
+    background-color: #E17654;
+}
+
+.van-type.rugged:hover,
+.van-type.rugged.selected {
+    background-color: #115E59;
+}
+
+.van-type.luxury:hover,
+.van-type.luxury.selected {
+    background-color: #161616;
+}
+
+.van-type.clear-filters {
+    margin-left: -20px;
+    height: 34px;
+    padding: 6px 26px;
+    font-style: normal;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    text-decoration: underline;
+    background-color: transparent;
+    color: #4D4D4D;
+}
+
+i[class*='van-type-'] {
+    padding: 7px 14px;
+}
+
+.van-detail-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--_spacer);
+}
+
+.van-detail-container .back-button {
+    color: black;
+    text-decoration: none;
+}
+
+.van-detail-container .back-button span {
+    text-decoration: underline;
+}
+
+.van-detail {
+    display: flex;
+    flex-direction: row;
+    gap: var(--_spacer);
+    color: #161616;
+}
+
+.van-detail img {
+    width: 600px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+
+.van-detail h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.van-detail>i {
+    align-self: self-end;
+}
+
+.van-detail .van-price {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.van-detail .van-price span {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.van-detail .link-button {
+    background-color: #FF8C38;
+    color: white;
+    font-size: 1.125rem;
+}
+
+
 @media (max-width: 1280px) {
-  .home-container {
-    justify-content: center;
-    gap: 4rem;
-  }
+    .home-container {
+        justify-content: center;
+        gap: 4rem;
+    }
 
-  .home-container h1 {
-      font-weight: 700;
-      font-size: 4.75rem;
-      text-align: center;
-      width: 100%;
-  }
+    .home-container h1 {
+        font-weight: 700;
+        font-size: 4.75rem;
+        text-align: center;
+        width: 100%;
+    }
 
-  .home-container p {
-    text-align: center;
-    font-size: 1rem;
-    font-weight: 100;
+    .home-container p {
+        text-align: center;
+        font-size: 1rem;
+        font-weight: 100;
+    }
 
-  }
+    .about-page-container {
+        padding: 1rem 0px;
+    }
 
-  .about-page-container {
-      padding: 1rem 0px;
-  }
+    .about-page-content {
+        padding: 1rem;
+    }
 
-  .about-page-content {
-    padding: 1rem;
-  }
-  
-  .about-page-cta {
-    margin: 1rem;
-  }
+    .about-page-cta {
+        margin: 1rem;
+    }
+
+    .van-grid {
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    }
+
+    .van-list {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .van-detail-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: var(--_spacer);
+    }
+
+    .van-detail {
+        display: flex;
+        flex-direction: column;
+        gap: var(--_spacer);
+        color: #161616;
+    }
+
+    .van-detail img {
+        width: 100%;
+    }
 }
 
 @media (max-width: 768px) {
-  header {
-      display: flex;
-      align-items: center;
-      padding: 2rem 1rem;
-  }
+    header {
+        display: flex;
+        align-items: center;
+        padding: 2rem 1rem;
+    }
 
-  .home-container h1 {
-      font-weight: 700;
-      font-size: 2.5rem;
-  }
+    .home-container h1 {
+        font-weight: 700;
+        font-size: 2.5rem;
+    }
 
-  .home-container a {
-    width: 100%;
-  }
+    .home-container a {
+        width: 100%;
+    }
+
+    .van-list {
+        grid-template-columns: 1fr;
+    }
+
+    .van-detail {
+        display: flex;
+        flex-direction: column;
+        gap: var(--_spacer);
+        color: #161616;
+    }
 }
