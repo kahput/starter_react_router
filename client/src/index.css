@@ -28,7 +28,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: var(--_spacer);
+    padding-inline: var(--_spacer);
+    padding-block: 3rem;
 }
 
 nav {
@@ -181,7 +182,7 @@ footer {
 }
 
 /*** VAN PAGES ***/
-.van-list-container {
+.list-container {
     padding-inline: var(--_spacer);
 }
 
@@ -318,6 +319,7 @@ i[class*='van-type-'] {
 }
 
 .host-nav {
+    margin-block: var(--_spacer);
     display: flex;
     padding-inline: var(--_spacer);
     gap: var(--_spacer);
@@ -334,6 +336,88 @@ i[class*='van-type-'] {
     text-decoration: underline;
     font-weight: 600;
 }
+
+.host-list-container {
+    padding: var(--_spacer);
+}
+
+.host-list {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    gap: var(--_spacer);
+}
+
+.host-van-card {
+    display: flex;
+    padding: var(--_spacer);
+    gap: var(--_spacer);
+    background: #fff;
+    color: #161616;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.host-van-card img {
+    width: auto;
+    height: 100px;
+    border-radius: 5px;
+}
+
+.host-van-card p {
+    color: #4D4D4D;
+}
+
+.host-van-detail-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--_spacer);
+    margin: var(--_spacer);
+}
+
+.host-van-detail-container a {
+    color: #000;
+}
+
+.host-van-detail {
+    display: flex;
+    flex-direction: column;
+    padding: var(--_spacer);
+    gap: var(--_spacer);
+    background-color: #fff;
+    max-width: 1200px;
+}
+
+.host-van-detail>div {
+    display: flex;
+    align-items: center;
+    gap: var(--_spacer);
+}
+
+.host-van-detail img {
+    width: 200px;
+    border-radius: 5px;
+}
+
+.host-van-overview h2 {
+    font-size: 1.6rem;
+}
+
+.host-van-overview>p>span {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.host-van-detail>p {
+    padding: 0px;
+    margin: 0px;
+    max-width: 500px;
+}
+
+.host-van-detail span {
+    font-weight: bold;
+}
+
 
 @media (max-width: 1280px) {
     #root {

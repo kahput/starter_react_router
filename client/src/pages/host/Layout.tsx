@@ -10,11 +10,14 @@ function HostLayout() {
     return (
         <>
             <nav className="host-nav">
-                <NavLink end style={({ isActive }) => isActive ? activeStyle : undefined} to="/host">Dashboard</NavLink>
-                <NavLink style={({ isActive }) => isActive ? activeStyle : undefined} to="/host/income">Income</NavLink>
-                <NavLink style={({ isActive }) => isActive ? activeStyle : undefined} to="/host/reviews">Reviews</NavLink>
+                <NavLink end style={({ isActive }) => isActive ? activeStyle : undefined} to=".">Dashboard</NavLink>
+                <NavLink style={({ isActive }) => isActive ? activeStyle : undefined} to="income">Income</NavLink>
+                <NavLink style={({ isActive }) => isActive ? activeStyle : undefined} to="reviews">Reviews</NavLink>
+                <NavLink style={({ isActive }) => isActive ? activeStyle : undefined} to="vans">Vans</NavLink>
             </nav>
-            <Outlet />
+            <div className="host-content">
+                <Outlet />
+            </div>
         </>
     )
 }
